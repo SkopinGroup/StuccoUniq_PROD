@@ -1,1 +1,56 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+* {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #0C182B;
+}
+
+a {
+  color: #fff !important;
+}
+
+.blurred-bg {
+  background: #0c182b86;
+  -webkit-backdrop-filter: blur(32px);
+          backdrop-filter: blur(32px);
+  z-index: 999;
+}
+
+h1 {
+  font-family: "DM Sans", sans-serif !important;
+  overflow-y: hidden;
+}
+
+.text-light-blue {
+  color: #00C2ED;
+}
+
+.circle {
+  width: 400px;
+  height: 400px;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 0;
+  -webkit-filter: blur(60px);
+          filter: blur(60px);
+}
+
+.circle1 {
+  background-color: #00C2ED;
+  top: -30%;
+  right: -10%;
+}
+
+.circle2 {
+  background-color: #00C2ED;
+  bottom: -30%;
+  left: -10%;
+}
+
+.overlay {
+  -webkit-filter: blur(150px);
+          filter: blur(150px);
+  overflow-y: hidden;
+}
+/*# sourceMappingURL=styles.css.map */

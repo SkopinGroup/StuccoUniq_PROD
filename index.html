@@ -7,77 +7,825 @@
     <title>Steam and Brush - Cleaning Services</title>
     <link rel="stylesheet" href="./Styles/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="bg-black text-white">
-        <div class="container px-4 mx-auto">
-          <nav class="flex justify-between items-center py-8">
-            <a class="text-gray-600 text-2xl leading-none" href="#">
-              <img class="h-24" src="./Assets/logo.png" alt="" width="auto">
-            </a>
-            <div class="lg:hidden">
-              <button class="block navbar-burger text-gray-500 hover:text-gray-600 focus:outline-none">
-                <svg class="h-4 w-4" fill="currentColor " viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <title>Mobile menu</title>
-                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-                </svg>
-              </button>
+    <div class="overlay fixed w-screen h-screen">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+    </div>
+
+  <!-- Navbar -->
+  <header id="navbar" class="hidden lg:block fixed top-0 z-90 w-screen">
+    <div class="container mx-auto flex flex-wrap px-5 py-2 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <img class="w-36" src="./Assets/logo.png" alt="">
+      </a>
+      <nav class="md:ml-auto md:mr-auto text-white cursor-pointer flex flex-wrap items-center text-base justify-center">
+        <a class="mr-8 hover:underline">Over ons</a>
+        <a class="mr-8 hover:underline">Services</a>
+        <a class="mr-8 hover:underline">Tarieven</a>
+        <a class="mr-8 hover:underline">Gallerij</a>
+        <a class="mr-8 hover:underline">Contact</a>
+      </nav>
+      <button 
+        class="text-white rounded-2xl px-6 py-4 font-medium mr-4" 
+        style="background-image: linear-gradient(to right, #00C2ED -50%, #0A55A1  200%)">
+            Bekijk ons aanbod
+      </button>
+    </div>
+  </header>
+  <header id="navbar2" class="lg:hidden fixed top-0 z-90 w-screen">
+    <div class="container mx-auto flex flex-wrap px-5 justify-between items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <img class="w-36" src="./Assets/logo.png" alt="">
+      </a>
+      <button 
+        class="text-white rounded-2xl px-6 py-4 font-medium mr-4" 
+        style="background-image: linear-gradient(to right, #00C2ED -50%, #0A55A1  200%)">
+            -
+        </button>
+    </div>
+  </header>
+  <!-- Navbar -->
+
+  <!-- Landing page -->
+  <section class="text-white body-font mt-24">
+    <div class="container mx-auto flex flex-col px-5 py-24 justify-center items-center">
+        <div class="relative z-80 w-full md:w-2/3 flex flex-col mb-16 items-center text-center">
+            <h1 class="title-font sm:text-8xl text-6xl mb-4 font-bold">Diepte reiniging <hr class="border-t-0 py-2"> op locatie 📍</h1>
+            <p class="my-6 leading-relaxed font-normal">Kickstarter biodiesel roof party wayfarers cold-pressed. Palo santo live-edge tumeric scenester copper mug flexitarian. Prism vice offal plaid everyday carry. Gluten-free chia VHS squid listicle artisan.</p>
+            <div class="pt-2 flex w-full justify-center items-end">
+                <button 
+                    class="text-white rounded-2xl px-8 py-4 font-medium sm:mr-4" 
+                    style="background-image: linear-gradient(to right, #00C2ED -50%, #0A55A1  200%)">
+                    Bekijk onze offertes
+                </button>
+                <button class="text-white px-8 py-4 font-medium sm:ml-4 bg-none flex items-center">
+                    Neem contact met ons op
+                    <svg class="ml-4 text-lg" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                    </svg>
+                </button>
             </div>
-            <ul class="hidden lg:flex ml-auto mr-10 items-center w-auto space-x-12">
-              <li><a class="text-sm text-white" href="#">Over ons</a></li>
-              <li><a class="text-sm text-white" href="#">Services</a></li>
-              <li><a class="text-sm text-white" href="#">Tarieven</a></li>
-              <li><a class="text-sm text-white" href="#">Galerij</a></li>
-            </ul>
-            <a class="hidden lg:block px-6 py-3 text-sm text-white font-bold border border-blue-500 hover:bg-blue-500 rounded" href="#">Neem contact op</a>
-          </nav>
-          <div class="flex flex-wrap items-center -mx-4 lg:my-10">
-            <div class="w-full md:w-1/2 px-4 mb-8 md:mb-0">
-              <h2 class="mb-8 text-4xl lg:text-5xl font-bold max-w-sm">Diepte reiniging op locatie 📍.</h2>
-              <p class="mb-6 text-lg text-gray-500 leading-loose max-w-lg">Build a well-presented brand that everyone will love. Take care to develop resources continually and integrity them with previous projects.</p>
-              <div class="flex flex-wrap">
-                <a class="inline-block px-6 py-2 mr-4 text-sm text-white font-bold leading-loose bg-blue-500 hover:bg-blue-600 rounded transition duration-200" href="#">Track your performance</a>
-                <a class="inline-block px-6 py-2 text-sm text-white font-bold leading-loose border border-blue-400 hover:border-blue-600 rounded" href="#">Learn More</a></div>
-            </div>
-            <div class="w-full md:w-1/2 px-4">
-              <img class="object-cover w-full rounded-xl" src="https://via.placeholder.com/1200" alt="">
-            </div>
-            <button class="block mt-10 lg:mt-20 mx-auto w-16 h-16 p-5 rounded-full bg-gray-50 hover:bg-gray-100">
-              <svg class="mx-auto text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
+          </div>
+          <img src="./Assets/lp.jpg" class="relative z-80 mb-10 object-cover object-center rounded-xl" alt="hero">
+    </div>
+  </section>
+  <!-- Landing page -->
+
+  <!-- Short testimonial -->
+  <div class="w-full mx-auto p-8">
+    <svg stroke="currentColor" class="h-10 w-10 mb-8 m-auto text-light-blue" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+      <path d="M96.4 416h77.1l50.9-96.6V96h-160v223.4h77.1L96.4 416zm224 0h77.1l50-96.6V96H288.4v223.4h82l-50 96.6z"></path>
+    </svg>
+    <p class="text-gray-600 dark:text-white w-full md:w-2/3 m-auto text-center text-lg md:text-3xl">
+        <span class="font-bold text-light-blue">
+            “
+        </span>
+        To get social media testimonials like these, keep your customers engaged with your social media accounts by posting regularly yourself bleh bleh
+        <span class="font-bold text-light-blue">
+            ”
+        </span>
+    </p>
+    <div class="flex items-center justify-center mt-8">
+        <div class="flex ml-2 items-center justify-center">
+            <span class="font-semibold text-light-blue mr-2 text-lg">
+                Jean Miguel
+            </span>
+            <span class="text-gray-400 text-xl font-light">
+                /
+            </span>
+            <span class="text-gray-400 text-md ml-2">
+                User of Tail-Kit
+            </span>
+        </div>
+    </div>
+  </div>
+  <!-- Short testimonial -->
+
+  <!-- Pricing -->
+  <div class="py-24">
+    <div class="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="pricing-box max-w-lg mx-auto rounded-lg shadow-lg overflow-hidden lg:max-w-none lg:flex">
+          <div class="bg-white dark:bg-gray-800 px-6 py-8 lg:flex-shrink-1 lg:p-12">
+              <h3 class="text-2xl leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-9 dark:text-white">
+                  Zero Commission
+              </h3>
+              <p class="mt-6 text-base leading-6 text-gray-500 dark:text-gray-200">
+                  Start selling online for free with all the features you need to launch your local delivery and pick-up service, nothing more. We don&#x27;t charge commission or monthly fees, keep all your margin.
+              </p>
+              <div class="mt-8">
+                  <div class="flex items-center">
+                      <h4 class="flex-shrink-0 pr-4 bg-white dark:bg-gray-800 text-sm leading-5 tracking-wider font-semibold uppercase text-indigo-600">
+                          What&#x27;s included
+                      </h4>
+                      <div class="flex-1 border-t-2 border-gray-200">
+                      </div>
+                  </div>
+                  <ul class="mt-8 lg:grid lg:grid-cols-2 lg:col-gap-8 lg:row-gap-5">
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              All illimited components
+                          </p>
+                      </li>
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              Own custom Tailwind styles
+                          </p>
+                      </li>
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              Unlimited Templates
+                          </p>
+                      </li>
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              Free premium dashboard
+                          </p>
+                      </li>
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              Best ranking
+                          </p>
+                      </li>
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              Prenium svg
+                          </p>
+                      </li>
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              My wife
+                          </p>
+                      </li>
+                  </ul>
+              </div>
+              <div class="mt-8">
+                  <div class="flex items-center">
+                      <h4 class="flex-shrink-0 pr-4 bg-white text-sm dark:bg-gray-800 leading-5 tracking-wider font-semibold uppercase text-indigo-600">
+                          &amp; What&#x27;s not
+                      </h4>
+                  </div>
+                  <ul class="mt-8 lg:grid lg:grid-cols-2 lg:col-gap-8 lg:row-gap-5">
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" class="h-6 w-6 mr-2" fill="red" viewBox="0 0 1792 1792">
+                                  <path d="M1277 1122q0-26-19-45l-181-181 181-181q19-19 19-45 0-27-19-46l-90-90q-19-19-46-19-26 0-45 19l-181 181-181-181q-19-19-45-19-27 0-46 19l-90 90q-19 19-19 46 0 26 19 45l181 181-181 181q-19 19-19 45 0 27 19 46l90 90q19 19 46 19 26 0 45-19l181-181 181 181q19 19 45 19 27 0 46-19l90-90q19-19 19-46zm387-226q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              No Contracts. No monthly, setup, or additional payment processor fees
+                          </p>
+                      </li>
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" class="h-6 w-6 mr-2" fill="red" viewBox="0 0 1792 1792">
+                                  <path d="M1277 1122q0-26-19-45l-181-181 181-181q19-19 19-45 0-27-19-46l-90-90q-19-19-46-19-26 0-45 19l-181 181-181-181q-19-19-45-19-27 0-46 19l-90 90q-19 19-19 46 0 26 19 45l181 181-181 181q-19 19-19 45 0 27 19 46l90 90q19 19 46 19 26 0 45-19l181-181 181 181q19 19 45 19 27 0 46-19l90-90q19-19 19-46zm387-226q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              No 2-week on-boarding, it takes 20 minutes!
+                          </p>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="py-8 px-6 text-center bg-gray-50 dark:bg-gray-700 lg:flex-shrink-0 lg:flex lg:flex-col lg:justify-center lg:p-12">
+              <p class="text-lg leading-6 font-bold text-gray-900 dark:text-white">
+                  Free
+              </p>
+              <div class="mt-4 flex items-center justify-center text-5xl leading-none font-extrabold text-gray-900 dark:text-white">
+                  <span>
+                      $0/mo
+                  </span>
+              </div>
+              <p class="mt-4 text-sm leading-5">
+                  <span class="block font-medium text-gray-500 dark:text-gray-400">
+                      Card payments:
+                  </span>
+                  <span class=" inline-block font-medium text-gray-500 dark:text-gray-400">
+                      2.9% + 20p per transaction
+                  </span>
+              </p>
+              <div class="mt-6">
+                  <div class="rounded-md shadow">
+                      <button type="button" class="py-2 px-4  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                          Create your store
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="pricing-box max-w-lg mx-auto rounded-lg shadow-lg overflow-hidden lg:max-w-none lg:flex">
+          <div class="bg-white dark:bg-gray-800 px-6 py-8 lg:flex-shrink-1 lg:p-12">
+              <h3 class="text-2xl leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-9 dark:text-white">
+                  Zero Commission
+              </h3>
+              <p class="mt-6 text-base leading-6 text-gray-500 dark:text-gray-200">
+                  Start selling online for free with all the features you need to launch your local delivery and pick-up service, nothing more. We don&#x27;t charge commission or monthly fees, keep all your margin.
+              </p>
+              <div class="mt-8">
+                  <div class="flex items-center">
+                      <h4 class="flex-shrink-0 pr-4 bg-white dark:bg-gray-800 text-sm leading-5 tracking-wider font-semibold uppercase text-indigo-600">
+                          What&#x27;s included
+                      </h4>
+                      <div class="flex-1 border-t-2 border-gray-200">
+                      </div>
+                  </div>
+                  <ul class="mt-8 lg:grid lg:grid-cols-2 lg:col-gap-8 lg:row-gap-5">
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              All illimited components
+                          </p>
+                      </li>
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              Own custom Tailwind styles
+                          </p>
+                      </li>
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              Unlimited Templates
+                          </p>
+                      </li>
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              Free premium dashboard
+                          </p>
+                      </li>
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              Best ranking
+                          </p>
+                      </li>
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              Prenium svg
+                          </p>
+                      </li>
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              My wife
+                          </p>
+                      </li>
+                  </ul>
+              </div>
+              <div class="mt-8">
+                  <div class="flex items-center">
+                      <h4 class="flex-shrink-0 pr-4 bg-white text-sm dark:bg-gray-800 leading-5 tracking-wider font-semibold uppercase text-indigo-600">
+                          &amp; What&#x27;s not
+                      </h4>
+                  </div>
+                  <ul class="mt-8 lg:grid lg:grid-cols-2 lg:col-gap-8 lg:row-gap-5">
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" class="h-6 w-6 mr-2" fill="red" viewBox="0 0 1792 1792">
+                                  <path d="M1277 1122q0-26-19-45l-181-181 181-181q19-19 19-45 0-27-19-46l-90-90q-19-19-46-19-26 0-45 19l-181 181-181-181q-19-19-45-19-27 0-46 19l-90 90q-19 19-19 46 0 26 19 45l181 181-181 181q-19 19-19 45 0 27 19 46l90 90q19 19 46 19 26 0 45-19l181-181 181 181q19 19 45 19 27 0 46-19l90-90q19-19 19-46zm387-226q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              No Contracts. No monthly, setup, or additional payment processor fees
+                          </p>
+                      </li>
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" class="h-6 w-6 mr-2" fill="red" viewBox="0 0 1792 1792">
+                                  <path d="M1277 1122q0-26-19-45l-181-181 181-181q19-19 19-45 0-27-19-46l-90-90q-19-19-46-19-26 0-45 19l-181 181-181-181q-19-19-45-19-27 0-46 19l-90 90q-19 19-19 46 0 26 19 45l181 181-181 181q-19 19-19 45 0 27 19 46l90 90q19 19 46 19 26 0 45-19l181-181 181 181q19 19 45 19 27 0 46-19l90-90q19-19 19-46zm387-226q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              No 2-week on-boarding, it takes 20 minutes!
+                          </p>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="py-8 px-6 text-center bg-gray-50 dark:bg-gray-700 lg:flex-shrink-0 lg:flex lg:flex-col lg:justify-center lg:p-12">
+              <p class="text-lg leading-6 font-bold text-gray-900 dark:text-white">
+                  Free
+              </p>
+              <div class="mt-4 flex items-center justify-center text-5xl leading-none font-extrabold text-gray-900 dark:text-white">
+                  <span>
+                      $0/mo
+                  </span>
+              </div>
+              <p class="mt-4 text-sm leading-5">
+                  <span class="block font-medium text-gray-500 dark:text-gray-400">
+                      Card payments:
+                  </span>
+                  <span class=" inline-block font-medium text-gray-500 dark:text-gray-400">
+                      2.9% + 20p per transaction
+                  </span>
+              </p>
+              <div class="mt-6">
+                  <div class="rounded-md shadow">
+                      <button type="button" class="py-2 px-4  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                          Create your store
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="pricing-box max-w-lg mx-auto rounded-lg shadow-lg overflow-hidden lg:max-w-none lg:flex">
+          <div class="bg-white dark:bg-gray-800 px-6 py-8 lg:flex-shrink-1 lg:p-12">
+              <h3 class="text-2xl leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-9 dark:text-white">
+                  Zero Commission
+              </h3>
+              <p class="mt-6 text-base leading-6 text-gray-500 dark:text-gray-200">
+                  Start selling online for free with all the features you need to launch your local delivery and pick-up service, nothing more. We don&#x27;t charge commission or monthly fees, keep all your margin.
+              </p>
+              <div class="mt-8">
+                  <div class="flex items-center">
+                      <h4 class="flex-shrink-0 pr-4 bg-white dark:bg-gray-800 text-sm leading-5 tracking-wider font-semibold uppercase text-indigo-600">
+                          What&#x27;s included
+                      </h4>
+                      <div class="flex-1 border-t-2 border-gray-200">
+                      </div>
+                  </div>
+                  <ul class="mt-8 lg:grid lg:grid-cols-2 lg:col-gap-8 lg:row-gap-5">
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              All illimited components
+                          </p>
+                      </li>
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              Own custom Tailwind styles
+                          </p>
+                      </li>
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              Unlimited Templates
+                          </p>
+                      </li>
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              Free premium dashboard
+                          </p>
+                      </li>
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              Best ranking
+                          </p>
+                      </li>
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              Prenium svg
+                          </p>
+                      </li>
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+                                  <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              My wife
+                          </p>
+                      </li>
+                  </ul>
+              </div>
+              <div class="mt-8">
+                  <div class="flex items-center">
+                      <h4 class="flex-shrink-0 pr-4 bg-white text-sm dark:bg-gray-800 leading-5 tracking-wider font-semibold uppercase text-indigo-600">
+                          &amp; What&#x27;s not
+                      </h4>
+                  </div>
+                  <ul class="mt-8 lg:grid lg:grid-cols-2 lg:col-gap-8 lg:row-gap-5">
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" class="h-6 w-6 mr-2" fill="red" viewBox="0 0 1792 1792">
+                                  <path d="M1277 1122q0-26-19-45l-181-181 181-181q19-19 19-45 0-27-19-46l-90-90q-19-19-46-19-26 0-45 19l-181 181-181-181q-19-19-45-19-27 0-46 19l-90 90q-19 19-19 46 0 26 19 45l181 181-181 181q-19 19-19 45 0 27 19 46l90 90q19 19 46 19 26 0 45-19l181-181 181 181q19 19 45 19 27 0 46-19l90-90q19-19 19-46zm387-226q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              No Contracts. No monthly, setup, or additional payment processor fees
+                          </p>
+                      </li>
+                      <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" class="h-6 w-6 mr-2" fill="red" viewBox="0 0 1792 1792">
+                                  <path d="M1277 1122q0-26-19-45l-181-181 181-181q19-19 19-45 0-27-19-46l-90-90q-19-19-46-19-26 0-45 19l-181 181-181-181q-19-19-45-19-27 0-46 19l-90 90q-19 19-19 46 0 26 19 45l181 181-181 181q-19 19-19 45 0 27 19 46l90 90q19 19 46 19 26 0 45-19l181-181 181 181q19 19 45 19 27 0 46-19l90-90q19-19 19-46zm387-226q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+                                  </path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
+                              No 2-week on-boarding, it takes 20 minutes!
+                          </p>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="py-8 px-6 text-center bg-gray-50 dark:bg-gray-700 lg:flex-shrink-0 lg:flex lg:flex-col lg:justify-center lg:p-12">
+              <p class="text-lg leading-6 font-bold text-gray-900 dark:text-white">
+                  Free
+              </p>
+              <div class="mt-4 flex items-center justify-center text-5xl leading-none font-extrabold text-gray-900 dark:text-white">
+                  <span>
+                      $0/mo
+                  </span>
+              </div>
+              <p class="mt-4 text-sm leading-5">
+                  <span class="block font-medium text-gray-500 dark:text-gray-400">
+                      Card payments:
+                  </span>
+                  <span class=" inline-block font-medium text-gray-500 dark:text-gray-400">
+                      2.9% + 20p per transaction
+                  </span>
+              </p>
+              <div class="mt-6">
+                  <div class="rounded-md shadow">
+                      <button type="button" class="py-2 px-4  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                          Create your store
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- Pricing -->
+
+  <!-- Gallery -->
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+      <div class="flex flex-wrap md:-m-2 -m-1">
+        <div class="flex flex-wrap w-1/2">
+          <div class="md:p-2 p-1 w-1/2">
+            <img 
+                alt="gallery" 
+                class="w-full rounded-xl object-cover h-full object-center block" 
+                src="./Assets/schuim_2.jpg">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img 
+                alt="gallery" 
+                class="w-full rounded-xl object-cover h-full object-center block" 
+                src="./Assets/stofzuigen.jpeg">
+          </div>
+          <div class="md:p-2 p-1 w-full">
+            <img 
+                alt="gallery" 
+                class="w-full h-full rounded-xl object-cover object-center block" 
+                src="./Assets/tuin.JPG">
           </div>
         </div>
-        <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
-          <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-          <nav class="relative flex flex-col py-6 px-6 w-full h-full bg-white border-r overflow-y-auto">
-            <div class="flex items-center mb-8">
-              <a class="mr-auto text-2xl font-semibold leading-none" href="#">
-                <img class="h-8" src="mockup-assets/logos/shuffle-ux.svg" alt="" width="auto">
-              </a>
-              <button class="navbar-close">
-                <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-              </button>
-            </div>
-            <div>
-              <ul>
-                <li class="mb-1"><a class="block p-4 text-sm font-semibold text-gray-900 hover:bg-gray-50 rounded" href="#">About</a></li>
-                <li class="mb-1"><a class="block p-4 text-sm font-semibold text-gray-900 hover:bg-gray-50 rounded" href="#">Company</a></li>
-                <li class="mb-1"><a class="block p-4 text-sm font-semibold text-gray-900 hover:bg-gray-50 rounded" href="#">Services</a></li>
-                <li class="mb-1"><a class="block p-4 text-sm font-semibold text-gray-900 hover:bg-gray-50 rounded" href="#">Testimonials</a></li>
-              </ul>
-            </div>
-            <div class="mt-auto">
-              <div class="pt-6"><a class="block px-6 py-2 mb-2 text-sm text-center text-gray-500 hover:text-gray-600 font-bold leading-loose border border-gray-100 hover:border-gray-200 rounded" href="#">Contact Us</a></div>
-              <p class="mt-6 mb-4 text-sm text-center text-gray-400">
-                <span>© 2021 All rights reserved.</span>
-              </p>
-            </div>
-          </nav>
+        <div class="flex flex-wrap w-1/2">
+          <div class="md:p-2 p-1 w-full">
+            <img 
+                alt="gallery" 
+                class="w-full h-full rounded-xl object-cover object-center block" 
+                src="./Assets/kwast.jpeg">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img 
+                alt="gallery" 
+                class="w-full object-cover h-full rounded-xl object-center block" 
+                src="./Assets/spons.jpg">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img 
+                alt="gallery" 
+                class="w-full object-cover h-full rounded-xl object-center block" 
+                src="./Assets/schuim.jpg">
+          </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
+  <!-- Gallery -->
+
+  <section class="text-white body-font relative">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-12">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4">Neem contact met ons op</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.</p>
+      </div>
+      <div class="lg:w-1/2 md:w-2/3 mx-auto overflow-hidden">
+        <div class="flex flex-wrap -m-2">
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="name" class="leading-7 text-sm text-white">Name</label>
+              <input type="text" id="name" name="name" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+          </div>
+          <div class="p-2 w-1/2">
+            <div class="relative">
+              <label for="email" class="leading-7 text-sm text-white">Email</label>
+              <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+          </div>
+          <div class="p-2 w-full">
+            <div class="relative">
+              <label for="message" class="leading-7 text-sm text-white">Message</label>
+              <textarea id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+            </div>
+          </div>
+          <div class="p-2 w-full flex justify-center">
+            <button 
+                class="text-white rounded-2xl px-6 py-4 font-medium w-max" 
+                style="background-image: linear-gradient(to right, #00C2ED -50%, #0A55A1  200%)">
+                    Verzend
+            </button>
+          </div>
+          <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+            <a class="text-indigo-500">info@sbcleaning.nl</a>
+            <p class="leading-normal my-5">49 Smith St.
+              <br>Saint Cloud, MN 56301
+            </p>
+            <span class="inline-flex">
+              <a class="text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-4 text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-4 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                </svg>
+              </a>
+              <a class="ml-4 text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="pt-4 pb-8 xl:pt-8">
+    <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 text-gray-400 dark:text-gray-300">
+        <ul class="text-lg font-light pb-8 flex flex-wrap justify-center">
+            <li class="w-1/2 md:w-1/3 lg:w-1/3">
+                <div class="text-center">
+                    <h2 class="text-gray-500 dark:text-gray-200 text-md uppercase mb-4">
+                        Components
+                    </h2>
+                    <ul>
+                        <li class="mb-4 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                            <a href="#">
+                                Elements
+                            </a>
+                        </li>
+                        <li class="mb-4 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                            <a href="#">
+                                Forms
+                            </a>
+                        </li>
+                        <li class="mb-4 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                            <a href="#">
+                                Commerces
+                            </a>
+                        </li>
+                        <li class="mb-4 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                            <a href="#">
+                                Navigation
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="w-1/2 md:w-1/3 lg:w-1/3">
+                <div class="text-center">
+                    <h2 class="text-gray-500 dark:text-gray-200 text-md uppercase mb-4">
+                        Contacts
+                    </h2>
+                    <ul>
+                        <li class="mb-4 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                            <a href="#">
+                                Github
+                            </a>
+                        </li>
+                        <li class="mb-4 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                            <a href="#">
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="mb-4 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                            <a href="#">
+                                Twitter
+                            </a>
+                        </li>
+                        <li class="mb-4 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                            <a href="#">
+                                LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="w-1/2 md:w-1/3 lg:w-1/3">
+                <div class="text-center">
+                    <h2 class="text-gray-500 dark:text-gray-200 text-md uppercase mb-4">
+                        Customization
+                    </h2>
+                    <ul>
+                        <li class="mb-4 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                            <a href="#">
+                                Settings
+                            </a>
+                        </li>
+                        <li class="mb-4 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                            <a href="#">
+                                Themes
+                            </a>
+                        </li>
+                        <li class="mb-4 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                            <a href="#">
+                                Plugins
+                            </a>
+                        </li>
+                        <li class="mb-4 hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
+                            <a href="#">
+                                LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <div class="pt-8 flex border-t border-gray-200 max-w-xs mx-auto items-center justify-between">
+            <a href="#">
+                <svg width="20" height="20" fill="currentColor" class="text-xl hover:text-gray-800 dark:hover:text-white transition-colors duration-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z">
+                    </path>
+                </svg>
+            </a>
+            <a href="#">
+                <svg width="20" height="20" fill="currentColor" class="text-xl hover:text-gray-800 dark:hover:text-white transition-colors duration-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z">
+                    </path>
+                </svg>
+            </a>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="text-xl hover:text-gray-800 dark:hover:text-white transition-colors duration-200" viewBox="0 0 1792 1792">
+                    <path d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5q0 251-146.5 451.5t-378.5 277.5q-27 5-40-7t-13-30q0-3 .5-76.5t.5-134.5q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-119-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-85-13.5q-45 113-8 204-79 87-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-39 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 88.5t.5 54.5q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103zm-477 1103q3-7-7-12-10-3-13 2-3 7 7 12 9 6 13-2zm31 34q7-5-2-16-10-9-16-3-7 5 2 16 10 10 16 3zm30 45q9-7 0-19-8-13-17-6-9 5 0 18t17 7zm42 42q8-8-4-19-12-12-20-3-9 8 4 19 12 12 20 3zm57 25q3-11-13-16-15-4-19 7t13 15q15 6 19-6zm63 5q0-13-17-11-16 0-16 11 0 13 17 11 16 0 16-11zm58-10q-2-11-18-9-16 3-14 15t18 8 14-14z">
+                    </path>
+                </svg>
+            </a>
+            <a href="#">
+                <svg width="20" height="20" fill="currentColor" class="text-xl hover:text-gray-800 dark:hover:text-white transition-colors duration-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z">
+                    </path>
+                </svg>
+            </a>
+            <a href="#">
+                <svg width="20" height="20" fill="currentColor" class="text-xl hover:text-gray-800 dark:hover:text-white transition-colors duration-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1551 1476q15-6 26-3t11 17.5-15 33.5q-13 16-44 43.5t-95.5 68-141 74-188 58-229.5 24.5q-119 0-238-31t-209-76.5-172.5-104-132.5-105-84-87.5q-8-9-10-16.5t1-12 8-7 11.5-2 11.5 4.5q192 117 300 166 389 176 799 90 190-40 391-135zm207-115q11 16 2.5 69.5t-28.5 102.5q-34 83-85 124-17 14-26 9t0-24q21-45 44.5-121.5t6.5-98.5q-5-7-15.5-11.5t-27-6-29.5-2.5-35 0-31.5 2-31 3-22.5 2q-6 1-13 1.5t-11 1-8.5 1-7 .5h-10l-3-.5-2-1.5-1.5-3q-6-16 47-40t103-30q46-7 108-1t76 24zm-394-443q0 31 13.5 64t32 58 37.5 46 33 32l13 11-227 224q-40-37-79-75.5t-58-58.5l-19-20q-11-11-25-33-38 59-97.5 102.5t-127.5 63.5-140 23-137.5-21-117.5-65.5-83-113-31-162.5q0-84 28-154t72-116.5 106.5-83 122.5-57 130-34.5 119.5-18.5 99.5-6.5v-127q0-65-21-97-34-53-121-53-6 0-16.5 1t-40.5 12-56 29.5-56 59.5-48 96l-294-27q0-60 22-119t67-113 108-95 151.5-65.5 190.5-24.5q100 0 181 25t129.5 61.5 81 83 45 86 12.5 73.5v589zm-672 21q0 86 70 133 66 44 139 22 84-25 114-123 14-45 14-101v-162q-59 2-111 12t-106.5 33.5-87 71-32.5 114.5z">
+                    </path>
+                </svg>
+            </a>
+        </div>
+        <div class="text-center pt-10 sm:pt-12 font-light flex items-center justify-center">
+            Created by Antonio Skopin.
+        </div>
+    </div>
+  </footer>
+  <!-- Footer -->
+
+  <script src="./Scripts/navbar.js"></script>
 </body>
 </html>
