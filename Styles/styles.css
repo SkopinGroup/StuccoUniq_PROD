@@ -3,6 +3,11 @@
   scroll-behavior: smooth;
 }
 
+header {
+  z-index: 10000;
+  position: fixed;
+}
+
 body {
   background-color: #0C182B;
 }
