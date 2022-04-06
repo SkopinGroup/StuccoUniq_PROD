@@ -12,7 +12,7 @@
       <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
    </head>
    <body>
-      <div class="overlay fixed w-screen h-screen">
+      <div class="hidden md:block overlay fixed w-screen h-screen">
          <div class="circle circle1"></div>
          <div class="circle circle2"></div>
       </div>
@@ -116,7 +116,7 @@
                </div>
             </div>
             <div class="px-4 my-8 md:my-0">
-               <video class="rounded-xl object-cover object-center" style="height: 40rem; width: 40rem;" autoplay muted loop>
+               <video id="vid" class="rounded-xl object-cover object-center" style="height: 40rem; width: 40rem;" playsinline autoplay muted loop>
                   <source src="./Assets/lp_video.mp4" type="video/mp4">
                   Your browser does not support HTML video.
                 </video>    
