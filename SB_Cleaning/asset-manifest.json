@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c9f1b91b.css",
+    "main.js": "/static/js/main.3a4db965.js",
+    "static/media/lp_video.mp4": "/static/media/lp_video.b0a477838dc3f2640522.mp4",
+    "static/media/spons.jpg": "/static/media/spons.e1b997289acfee93f82f.jpg",
+    "static/media/deep.jpeg": "/static/media/deep.351e9ac69e756f2bbed1.jpeg",
+    "static/media/schuim_auto.jpeg": "/static/media/schuim_auto.d044da73fdf50b171f0b.jpeg",
+    "static/media/kwast_binnen.jpeg": "/static/media/kwast_binnen.c3753dac58f38efb80d1.jpeg",
+    "static/media/cleaning_details.jpeg": "/static/media/cleaning_details.cece52fe00f54d1ea77d.jpeg",
+    "static/media/stofzuigen.jpeg": "/static/media/stofzuigen.e6be46065e4049dbd332.jpeg",
+    "index.html": "/index.html",
+    "main.c9f1b91b.css.map": "/static/css/main.c9f1b91b.css.map",
+    "main.3a4db965.js.map": "/static/js/main.3a4db965.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c9f1b91b.css",
+    "static/js/main.3a4db965.js"
+  ]
+}
