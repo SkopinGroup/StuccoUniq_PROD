@@ -4,3 +4,19 @@
   -o-object-fit: cover;
   object-fit: cover;
 }
+
+.blue-bg {
+  background-color: #2a4485;
+}
+
+.blue-bg-l {
+  background-color: #2a448552;
+}
+
+.blue-border {
+  border-color: #2a4485;
+}
+
+.blue-text {
+  color: #2a4485;
+}
